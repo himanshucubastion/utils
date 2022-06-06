@@ -1,5 +1,6 @@
-import isMty from './isMty'
-import parseNumber from './parseNumber';
+let parseNumber = require('./parseNumber');
+let isMty = require('./isMty');
+
 module.exports = (amount, percent) => {
     try {
         amount = isMty(amount) ? 0 : parseFloat(amount);

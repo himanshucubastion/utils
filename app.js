@@ -1,2 +1,2 @@
-import utils from "./utils";
+let utils = require('./utils');
 module.exports = utils;

@@ -53,4 +53,17 @@ let lastDateOfMonth = (date) => {
     }
 }
 
-module.exports = { parseDate, workingDays, lastDateOfMonth }
+/**
+ * This function will return date only
+ * @param {Date} date
+ * @returns {String} Date format is yyyy-mm-dd.
+ */
+
+let parseDateOnly = (date) => {
+    try {
+        return `${date.getFullYear()}-${convertIntoTwoDigit(date.getMonth() + 1)}-${convertIntoTwoDigit(date.getDate())}`;
+    } catch (error) {
+        throw error
+    }
+}
+module.exports = { parseDate, workingDays, lastDateOfMonth, parseDateOnly }
